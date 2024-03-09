@@ -1,0 +1,83 @@
+<div class="movie-detail-header custom-header">
+    <h1 class="movie-detail-header--title">
+        {{movieDetail.movieName}}
+    </h1>
+    <div class="box-restricted">
+        <span class="restricted-mark_pink restricted-detail--text">Película con restricción del distribuidor.</span>
+    </div>
+    <ul class="horizontal-list movie-detail-header--subtitle">
+        <li class="horizontal-list--item">{{movieDetail.movieGenre.movieGenreName}}</li>
+        <li class="horizontal-list--item-separator">|</li>
+        <li class="horizontal-list--item">{{(formatMinutesToHoursAndMinutes(movieDetail.duration))}}</li>
+    </ul>
+    <div class="movie-detail-header--purchase">
+    </div>
+    <button mat-button style="margin-left: 0;" [routerLink]="['/movies']"> <i class="fa-solid fa-left-long"></i> Retroceder </button>
+</div>
+
+<div class="movie-details--info custom-info">
+    <div class="movie-details--poster-container">
+        <div class="image-loader image-loader_loaded movie-details--poster">
+            <img role="presentation" alt="Gregorio"
+                class="image-loader--image image-loader--image_loaded" src="{{movieDetail.imgURLOrBase64}}"
+                style="width: 400px; height: auto;">
+        </div>
+    </div>
+    <div class="movie-details--info-synopsis">
+        <h2 class="movie-details--info-synopsis-title">Sinopsis.</h2>
+        <p class="movie-details--info-synopsis-text">{{movieDetail.synopsis}}</p>
+    </div>
+    <h3 class="movie-details--info-label">Género</h3>
+    <p style="margin: 0px;">{{movieDetail.movieGenre.movieGenreName}}</p>
+</div>
+<br>
+<br>
+
+<div class="container custom-container">
+    <div class="film-detail-container">
+      <h2 class="film-detail-showtimes--title"><span>La función perfecta para ti.</span></h2>
+  
+      <mat-accordion [multi]="false">
+        <mat-expansion-panel *ngFor="let cinema of cinemas">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ cinema.cinemaName }}
+              <span class="icon" [ngClass]="{'icon-opened': isCinemaOpen(cinema.cinemaID), 'icon-closed': !isCinemaOpen(cinema.cinemaID)}"></span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+  
+          <div class="accordion-body">
+            <mat-accordion>
+              <mat-expansion-panel *ngFor="let cinemaRoom of cinema.cinemaRooms" (click)="toggleCinemaRoom(cinemaRoom.cinemaRoomID)">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    {{ cinemaRoom.cinemaRoomName }}
+                    <span class="icon" [ngClass]="{'icon-opened': isCinemaRoomOpen(cinemaRoom.cinemaRoomID), 'icon-closed': !isCinemaRoomOpen(cinemaRoom.cinemaRoomID)}"></span>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+  
+                <div class="accordion-body">
+                  <div class="sessions-details" *ngIf="movieDetail.movieID && cinemaRoom.cinemaRoomID">
+                    <ng-container *ngIf="screenings.length > 0; else noScreenings">
+                      <div class="sessions-details d-flex flex-row">
+                        <div *ngFor="let screening of screenings" class="me-2">
+                          <button id="{{ 'button-' + cinemaRoom.cinemaRoomID + '-' + screening.screeningID }}" type="button" (click)="openPurchaseModal(cinemaRoom.cinemaRoomID)" class="button call-to-action movie-detail-header--purchase-button-large custom-purchase-button">
+                            <span class="icon cineplanet-icon cineplanet-icon_tickets cineplanet-icon_small call-to-action--icon call-to-action--icon_prefix" role="presentation"></span>
+                            <span class="call-to-action--text">{{ screening.startDateScreening | date: 'HH:mm' }} - {{ screening.endDateScreening | date: 'HH:mm' }}</span>
+                          </button>
+                        </div>
+                      </div>
+                    </ng-container>
+                    <ng-template #noScreenings>
+                      <p>No hay funciones disponibles.</p>
+                    </ng-template>
+                  </div>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+  

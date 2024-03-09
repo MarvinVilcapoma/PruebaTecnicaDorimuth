@@ -1,0 +1,9 @@
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Domain\obj\Debug\netcoreapp3.1\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Domain\obj\Debug\netcoreapp3.1\Domain.pdb

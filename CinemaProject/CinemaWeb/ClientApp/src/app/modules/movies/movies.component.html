@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 d-flex flex-column align-items-center justify-content-center" id="leftMenu">
+      <input type="text" class="form-control mb-2" placeholder="Nombre de la película" [(ngModel)]="movieName">
+      <select class="form-select mb-2" [(ngModel)]="selectedGenre" aria-label="Default select example">
+        <option value="0" selected>Seleccione un Género</option>
+        <option *ngFor="let genre of movieGenres" [value]="genre.movieGenreID">{{ genre.movieGenreName }}</option>
+      </select>
+      <button id="button-ui-57" type="button" class="button call-to-action movie-detail-header--purchase-button-large custom-purchase-button" (click)="searchMovie()">
+        <span class="icon cineplanet-icon cineplanet-icon_tickets cineplanet-icon_small call-to-action--icon call-to-action--icon_prefix" role="presentation"></span>
+        <span class="call-to-action--text">Buscar</span>
+      </button>
+    </div>
+
+    <div class="col-md-8 col-sm-12" id="rightMenu">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mb-3" *ngFor="let movie of movies">
+            <mat-card style="width: 100%; height: 100%;">
+              <img mat-card-image src="{{ movie.imgURLOrBase64 }}" alt="...">
+              <mat-card-content style="max-height: 30%;">
+                <h5 class="card-title">{{ movie.movieName }}</h5>
+                <p class="card-text overflow-hidden">{{ movie.synopsis }}</p>
+                <button mat-button id="button-ui-58" class="button call-to-action movie-detail-header--purchase-button-large custom-purchase-button" [routerLink]="['/movies-detail', movie.movieID]">
+                  <span class="icon cineplanet-icon cineplanet-icon_tickets cineplanet-icon_small call-to-action--icon call-to-action--icon_prefix" role="presentation"></span>
+                  <span class="call-to-action--text">Ver Cartelera</span>
+                </button>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <button mat-button id="button-ui-58" class="button call-to-action movie-detail-header--purchase-button-large custom-purchase-button" (click)="loadMoreMovies()" [disabled]="moreMoviesAvailable()">
+            <span class="icon cineplanet-icon cineplanet-icon_tickets cineplanet-icon_small call-to-action--icon call-to-action--icon_prefix" role="presentation"></span>
+            <span class="call-to-action--text">Cargar más películas <i class="fas fa-film"></i></span>
+          </button>
+        </div>
+      </div>
+  </div>
+</div>

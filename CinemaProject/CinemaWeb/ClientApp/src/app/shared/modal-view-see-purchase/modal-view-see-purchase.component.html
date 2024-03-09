@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Confirmación de Compra</h1>
+<div mat-dialog-content>
+  <p>Detalles de la reserva:</p>
+  <ul>
+    <li><strong>Nombres:</strong> {{ data.names }}</li>
+    <li><strong>Apellidos:</strong> {{ data.lastNames }}</li>
+    <li><strong>Fecha de Nacimiento:</strong> {{ data.birthDate | date }}</li>
+    <li><strong>DNI:</strong> {{ data.dni}}</li>
+    <li><strong>Género:</strong> {{ data.gender}}</li>
+    <li><strong>Correo Eléctronico:</strong> {{ data.email}}</li>
+
+  </ul>
+
+  <p>Detalle del pedido:</p>
+  <ul>
+    <li><strong>Cine:</strong> {{data.cinemaRoom?.cinema.cinemaName}}</li>
+    <li><strong>Película:</strong> {{data.movie.movieName}}</li>
+    <li><strong>Género:</strong> {{data.movie.movieGenre.movieGenreName}}</li>
+  </ul>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClose()">Cerrar</button>
+</div>

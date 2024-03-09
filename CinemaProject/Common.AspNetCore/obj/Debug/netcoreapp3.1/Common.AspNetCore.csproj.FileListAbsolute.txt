@@ -1,0 +1,10 @@
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\bin\Debug\netcoreapp3.1\Common.AspNetCore.deps.json
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\bin\Debug\netcoreapp3.1\Common.AspNetCore.dll
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\bin\Debug\netcoreapp3.1\Common.AspNetCore.pdb
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\obj\Debug\netcoreapp3.1\Common.AspNetCore.csproj.AssemblyReference.cache
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\obj\Debug\netcoreapp3.1\Common.AspNetCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\obj\Debug\netcoreapp3.1\Common.AspNetCore.AssemblyInfoInputs.cache
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\obj\Debug\netcoreapp3.1\Common.AspNetCore.AssemblyInfo.cs
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\obj\Debug\netcoreapp3.1\Common.AspNetCore.csproj.CoreCompileInputs.cache
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\obj\Debug\netcoreapp3.1\Common.AspNetCore.dll
+D:\Dorimuth\PruebaTecnicaDorimuth\CinemaProject\Common.AspNetCore\obj\Debug\netcoreapp3.1\Common.AspNetCore.pdb

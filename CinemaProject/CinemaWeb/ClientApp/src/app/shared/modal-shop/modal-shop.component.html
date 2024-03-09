@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>Modal de Compra</h1>
+  <div mat-dialog-content>
+    <form #purchaseForm="ngForm" (ngSubmit)="onComprarClick()">
+      <mat-form-field>
+        <input matInput placeholder="Nombres" [(ngModel)]="reservation.names" name="names" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Apellidos" [(ngModel)]="reservation.lastNames" name="lastNames" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento" [(ngModel)]="reservation.birthDate" name="birthDate" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Género</mat-label>
+        <mat-select [(ngModel)]="selectedGender" name="gender" required>
+          <mat-option *ngFor="let gender of genders" [value]="gender">
+            {{ gender }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="DNI" [(ngModel)]="reservation.dni" name="dni" maxlength="8" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Email" [(ngModel)]="reservation.email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <mat-error *ngIf="purchaseForm.controls['email'].hasError('pattern') && !purchaseForm.controls['email'].hasError('required')">
+          Ingresa un correo electrónico válido.
+        </mat-error>
+        <mat-error *ngIf="purchaseForm.controls['email'].hasError('required')">
+          El correo electrónico es obligatorio.
+        </mat-error>
+      </mat-form-field>
+
+
+
+      <!-- Agrega más campos según sea necesario -->
+
+      <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cerrar</button>
+        <button mat-button type="submit" [disabled]="!purchaseForm.valid">Comprar</button>
+      </div>
+    </form>
+  </div>
