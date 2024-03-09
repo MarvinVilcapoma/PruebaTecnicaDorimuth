@@ -34,3 +34,14 @@ Base de datos creada y desarrollada en SQL Server
 
 ![image](https://github.com/MarvinVilcapoma/PruebaTecnicaDorimuth/assets/54334317/f7d158b5-5d45-40bb-b28a-828e3b9f87f7)
 
+
+[ADICIONAL A ESTO ESTOY SUBIENDO EL BACKUP DE MI BASE DE DATOS]
+
+https://github.com/MarvinVilcapoma/PruebaTecnicaDorimuth/blob/main/CinemaDB.bak
+
+[ADJUNTO UN EVERNOTE CON LOS QUERY PARA INSERTAR DATA EN CASO REALICEN LA CREACIÓN DE LAS TABLAS CON MIGRACIONES]
+
+https://www.evernote.com/shard/s410/sh/d686cc45-0b82-f8f0-a4c1-5511bec4ef8e/vnoYuUKk87XE1azmkPRh_efiFuTzXm1Lf7jaYFk_bmg6BSyrxqhaFB1goA
+
+
+
